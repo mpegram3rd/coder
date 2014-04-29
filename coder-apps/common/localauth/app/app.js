@@ -193,12 +193,15 @@ exports.configure_handler = function( req, res ) {
     tmplvars['device_name'] = exports.settings.device_name;
     tmplvars['page_mode'] = "configure";
     
-    //only allow this step if they are authenticated or have not yet set a password
+/*    
+    //only allow this step if they are authenticated or have not yet set a password    
     if ( exports.isAuthenticated(req) || !exports.hasPassword() ) {
         res.render( exports.settings.viewpath + '/index', tmplvars );
     } else {
         res.redirect('/app/auth/login');
     }
+*/
+    res.render( exports.settings.viewpath + '/index', tmplvars );
 };
 
 exports.api_devicename_get_handler = function( req, res ) {
