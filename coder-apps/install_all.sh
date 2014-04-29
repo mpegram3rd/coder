@@ -18,5 +18,10 @@ fi
 base=$1
 
 mkdir -p $base
-cp ../coder-base/* $base/
+cp -r ../coder-base/* $base/
 ./install_common.sh $base
+
+echo "Preparing dependent libraries"
+cd $base
+npm install
+

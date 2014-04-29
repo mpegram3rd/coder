@@ -13,3 +13,7 @@ xcopy ..\common-base\*.* %base% /E
 
 echo "Installing common files"
 call install_common.cmd %base%
+
+echo "Preparing dependent libraries"
+ cd %base%
+ npm install
