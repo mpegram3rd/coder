@@ -21,7 +21,7 @@
 var mustache = require('mustache');
 var util = require('util');
 var fs = require('fs');
-var bcrypt = require('bcrypt-nodejs');
+// var bcrypt = require('bcrypt-nodejs');
 
 //stores cache of password hash and device name
 var device_settings = {
@@ -44,11 +44,15 @@ exports.settings={};
 
 exports.get_routes = [
     { path:'/', handler:'index_handler'},
+/*    
     { path:'/login', handler:'login_handler'},
     { path:'/logout', handler:'logout_handler'},
+*/    
     { path:'/configure', handler:'configure_handler'},
+/*    
     { path:'/addpassword', handler:'addpassword_handler'},
     { path:'/changepassword', handler:'changepassword_handler'},
+*/    
     { path: '/api/devicename/get', handler: 'api_devicename_get_handler' },
     { path: '/api/codercolor/get', handler: 'api_codercolor_get_handler' },
     { path: '/api/coderowner/get', handler: 'api_coderowner_get_handler' }
@@ -56,25 +60,30 @@ exports.get_routes = [
 
 
 exports.post_routes = [
+/*
     { path: '/api/login', handler: 'api_login_handler' },
     { path: '/api/logout', handler: 'api_logout_handler' },
+*/    
     { path: '/api/devicename/set', handler: 'api_devicename_set_handler' },
     { path: '/api/codercolor/set', handler: 'api_codercolor_set_handler' },
-    { path: '/api/coderowner/set', handler: 'api_coderowner_set_handler' },
+    { path: '/api/coderowner/set', handler: 'api_coderowner_set_handler' } // ,
+/*    
     { path: '/api/addpassword', handler: 'api_addpassword_handler' },
     { path: '/api/changepassword', handler: 'api_changepassword_handler' }
+*/    
 ];
 
 exports.on_destroy = function() {
 };
 
-
-exports.isAuthenticated = function( req ) {
+/*
+exports.isAuthenticated = function( req ) {	
     if ( typeof req.session !== 'undefined' && typeof req.session.authenticated !== 'undefined' ) {
         return req.session.authenticated === true;
     }
     return false;
 };
+*/
 
 exports.isConfigured = function() {
     if ( typeof device_settings.device_name !== 'undefined' && device_settings.device_name !== '' &&
@@ -85,6 +94,7 @@ exports.isConfigured = function() {
     }
 };
 
+/*
 exports.hasPassword = function() {
     if ( typeof device_settings.password_hash !== 'undefined' && device_settings.password_hash !== '' ) {
         return true;
@@ -92,6 +102,7 @@ exports.hasPassword = function() {
         return false;
     }
 };
+*/
 
 exports.getDeviceName = function() {
     return device_settings.device_name;
@@ -103,6 +114,7 @@ exports.getCoderColor = function() {
     return device_settings.coder_color;
 };
 
+/*
 exports.authenticate = function( req, password ) {
 
     var authenticated = bcrypt.compareSync( password, device_settings.password_hash );
@@ -117,7 +129,7 @@ exports.logout = function( req ) {
     
     req.session.authenticated = false;
 };
-
+*/
 
 exports.index_handler = function( req, res ) {
     
@@ -128,15 +140,18 @@ exports.index_handler = function( req, res ) {
     
     if ( !exports.isConfigured() ) {
         res.redirect('/app/auth/configure?firstuse');
-    } else if ( !exports.hasPassword() ) {
+/*
+     } else if ( !exports.hasPassword() ) {
         res.redirect('/app/auth/addpassword?firstuse');
     } else if ( !exports.isAuthenticated(req) ) {
         res.redirect('/app/auth/login' + firstuse);
+*/        
     } else {
         res.redirect('/app/coder' + firstuse);
     }
 };
 
+/*
 exports.addpassword_handler = function( req, res ) {
     var tmplvars = {};
     tmplvars['static_url'] = exports.settings.staticurl;
@@ -168,6 +183,7 @@ exports.changepassword_handler = function( req, res ) {
         res.redirect('/app/auth/login');
     }
 };
+*/
 
 exports.configure_handler = function( req, res ) {
     var tmplvars = {};
@@ -326,6 +342,7 @@ exports.api_codercolor_set_handler = function( req, res ) {
     
 };
 
+/*
 exports.api_addpassword_handler = function( req, res ) {
 
     //only allow this step if they have not yet set a password
@@ -531,6 +548,7 @@ exports.api_logout_handler = function( req, res ) {
 
     res.json( { status: 'success'} );
 };
+*/
 
 var saveDeviceSettings = function() {
     err = fs.writeFileSync( process.cwd() + "/device.json", JSON.stringify(device_settings, null, 4), 'utf8' );
@@ -580,6 +598,7 @@ var hostnameFromDeviceName = function( name ) {
     return hostname;
 };
 
+/*
 var getPasswordProblem = function( pass ) {
     if ( !pass || pass === '' ) {
         return "the password is empty";
@@ -611,6 +630,7 @@ var isValidPassword = function( pass ) {
     }
     return true;
 };
+*/
 
 var isValidColor = function( color ) {
     if ( !color || color === '' ) {

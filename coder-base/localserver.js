@@ -20,7 +20,6 @@
 
 
 var express = require('express');
-var io = require('socket.io');
 var net = require('http');
 var http = require('http');
 var https = require('https');
@@ -64,6 +63,9 @@ var apphandler = function( req, res, appdir ) {
 
     util.log( "GET: " + apppath + " " + appname );
 
+    auth = require(appdir + "localauth" + "/app");
+    
+ /* Disabling authentication requirement.    
     //Redirect to sign-in for unauthenticated users
     publicAllowed = ["auth"]; //apps that are exempt from any login (should only be auth)
     auth = require(appdir + "auth" + "/app");
@@ -73,7 +75,7 @@ var apphandler = function( req, res, appdir ) {
         res.redirect("http://" + getHost(req) + ":" + config.httpVisiblePort +  '/app/auth' ); 
         return;
     }
-
+*/
 
     if ( !apppath ) {
         apppath = "/";  

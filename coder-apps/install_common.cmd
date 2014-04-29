@@ -41,5 +41,6 @@ call install_app.cmd eyeball %base% .\common\
 call install_app.cmd game2d %base% .\common\
 call install_app.cmd hello_coder %base% .\common\
 call install_app.cmd space_rocks_ %base% .\common\
+call install_app.cmd localauth %base% .\common\
 
 echo "Copy completed"
