@@ -19,12 +19,12 @@ app=$1
 base=$2
 from=$3
 
-mkdir "$base/apps/$app"
-mkdir "$base/static/apps/$app"
-mkdir "$base/static/apps/$app/js"
-mkdir "$base/static/apps/$app/css"
-mkdir "$base/static/apps/$app/media"
-mkdir "$base/views/apps/$app"
+mkdir -p "$base/apps/$app"
+mkdir -p "$base/static/apps/$app"
+mkdir -p "$base/static/apps/$app/js"
+mkdir -p "$base/static/apps/$app/css"
+mkdir -p "$base/static/apps/$app/media"
+mkdir -p "$base/views/apps/$app"
 
 cp $from/$app/app/* $base/apps/$app/
 cp $from/$app/views/* $base/views/apps/$app/
