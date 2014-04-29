@@ -69,9 +69,11 @@ exports.listApps = function() {
     var path = process.cwd(); //root application path. different from __dirname
     var appdir = path + "/apps/";
     var apps = {};
+    console.log ("reading apps from: " + appdir);
     var files = fs.readdirSync(appdir);
     for ( var x in files ) {
         var filename = files[x];
+        console.log ('Processing: ' + filename);
         var info = fs.statSync( appdir + filename );
         if ( info.isDirectory() ) {
             var appinfo = null;

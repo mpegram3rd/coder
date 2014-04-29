@@ -65,17 +65,17 @@ var apphandler = function( req, res, appdir ) {
 
     auth = require(appdir + "localauth" + "/app");
     
- /* Disabling authentication requirement.    
+ /* Disabling authentication requirement.    */
     //Redirect to sign-in for unauthenticated users
-    publicAllowed = ["auth"]; //apps that are exempt from any login (should only be auth)
-    auth = require(appdir + "auth" + "/app");
-    user = auth.isAuthenticated(req, res);
-    if ( !user && publicAllowed.indexOf( appname ) < 0) {
-	util.log("redirect: " + "http://" + getHost(req) + ":" + config.httpVisiblePort + '/app/auth');
-        res.redirect("http://" + getHost(req) + ":" + config.httpVisiblePort +  '/app/auth' ); 
-        return;
-    }
-*/
+//    publicAllowed = ["auth"]; //apps that are exempt from any login (should only be auth)
+//    auth = require(appdir + "auth" + "/app");
+//    user = auth.isAuthenticated(req, res);
+//    if ( !user && publicAllowed.indexOf( appname ) < 0) {
+//	util.log("redirect: " + "http://" + getHost(req) + ":" + config.httpVisiblePort + '/app/auth');
+//        res.redirect("http://" + getHost(req) + ":" + config.httpVisiblePort +  '/app/auth' ); 
+//        return;
+//    }
+
 
     if ( !apppath ) {
         apppath = "/";  
@@ -164,7 +164,7 @@ localapp.use( express.session({
 localapp.use( '/static', express.static( __dirname + '/static' ) );
 localapp.get( '/', function( req, res ) {
     util.log( 'GET: /' );
-    res.redirect( '/app/auth' );
+    res.redirect( '/app/localauth' );
 });
 localapp.all( /^\/app\/(\w+)\/(.*)$/, function( req, res ) { apphandler( req, res,  __dirname + '/apps/'); } );
 localapp.all( /^\/app\/(\w+)\/$/, function( req, res ) { apphandler( req, res,  __dirname + '/apps/'); } );
