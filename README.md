@@ -1,8 +1,12 @@
 # Coder 
-## A simple way to make web stuff on Raspberry Pi
+## A simple way to make web stuff.
 
+### This is a fork of the original Raspberry Pi version that will allow our coder dojo to distribute and coder for people to use on Macs and PCs.
+This bundle helps to create a "portable distribution" for a targetted platform.  You need to have NodeJS installed on the platform you want to build for.  Go into coder-apps and run "install_all.cmd" (Windows), or "install_all.sh" Mac/Linux.  The resulting folder can be zipped up and distributed onto a machine with either a local copy of the NodeJS executable or will operate with a full NodeJS install.
+ 
 Coder is a free piece of software that turns a Raspberry Pi into a super simple platform that educators and parents can use to teach the basics of building for the web. New coders can craft small projects in HTML, CSS, and Javascript, right from the web browser.
 
+For the Original Raspberry Pi version, click here:
 http://goo.gl/coder
 
 ### What You'll Find Here
