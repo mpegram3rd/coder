@@ -46,7 +46,7 @@ call install_app.cmd localauth %base% .\common\
 REM RVA Coder Dojo extra bundles
 call install_app.cmd pop_up_penguins %base% .\common\
 call install_app.cmd comic_creator %base% .\common\
-call install_app.cmd rva-coderdojo-matrix %base% .\common\
+call install_app.cmd rva_coderdojo_matrix %base% .\common\
 
 REM  Assets for other projects used in RVA Coder Dojo
 if NOT EXIST %base%\project-assets  (

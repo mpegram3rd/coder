@@ -136,6 +136,7 @@ var apphandler = function( req, res, appdir ) {
 
 var startLocal = function() {
     http.createServer(localapp).listen( config.httpListenPort, '127.0.0.1' );
+    console.log('Listening on: http://127.0.0.1:' + config.httpListenPort);
 };
 
 var getHost = function( req ) {

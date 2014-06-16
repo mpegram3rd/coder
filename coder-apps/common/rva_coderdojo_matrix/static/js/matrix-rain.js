@@ -73,6 +73,12 @@ MatrixRain.prototype.setFontSize = function (fontSize) {
         this.fontSize = fontSize;
 };
 
+// Call setFontColor to change what color the text is in your secret message.
+MatrixRain.prototype.setFontColor = function (fontColor) {
+    if (fontColor != undefined)
+        this.fontColor = fontColor;
+};
+
 // This helps to resize the canvas.
 MatrixRain.prototype.resize = function (width, height) {
     this.matrixCanvas.width=width;

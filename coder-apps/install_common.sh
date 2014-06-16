@@ -31,7 +31,7 @@ base=$1
 ## RVA Coder Dojo extra bundles
 ./install_app.sh pop_up_penguins $base ./common/
 ./install_app.sh comic_creator $base ./common/
-./install_app.sh rva-coderdojo-matrix $base ./common/
+./install_app.sh rva_coderdojo_matrix $base ./common/
 
 ## Assets for other projects used in RVA Coder Dojo
 mkdir -p $base/project-assets
