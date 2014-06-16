@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Coder</title>
+    <meta charset="utf-8">
+    <!-- Standard Coder Includes -->
+    <script>
+        var appname = "{{app_name}}"; //app name (id) of this app
+        var appurl = "{{&app_url}}";
+        var staticurl = "{{&static_url}}"; //base path to your static files /static/apps/yourapp
+    </script>
+    <link href="/static/apps/coderlib/css/index.css" media="screen" rel="stylesheet" type="text/css"/>
+    <script src="/static/common/js/jquery.min.js"></script>
+    <script src="/static/common/ace-min/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/apps/coderlib/js/index.js"></script>
+    <script>
+        Coder.addBasicNav();
+    </script>
+    <!-- End Coder Includes -->
+
+    <!-- This app's includes -->
+    <link href="{{&static_url}}/css/index.css" media="screen" rel="stylesheet" type="text/css"/>
+    <script src="{{&static_url}}/js/index.js"></script>
+    <!-- End apps includes -->
+</head>
+<body>
+    <!--This is the frame for our game. It holds and centers all our other elements-->
+    <div id="gameholder">
+        <!--This holds the title image-->
+        <div id="title"></div>
+        <!--This holds our penguins and yeti-->
+        <div class="penguin1"></div>
+        <div class="penguin2"></div>
+        <div class="penguin3"></div>
+        <div class="penguin4"></div>
+        <div class="penguin5"></div>
+        <div class="penguin6"></div>
+        <div class="penguin7"></div>
+        <div class="penguin8"></div>
+        <div class="yeti"></div>
+    </div>
+</body>
+</html>

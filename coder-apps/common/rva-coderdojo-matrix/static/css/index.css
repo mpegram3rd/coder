@@ -1,0 +1,27 @@
+body {
+    margin: 0px;
+    background-color: #808080;
+}
+
+/* This helps to center the matrix canvas in the middle of the screen. */
+#matrix-canvas-stack canvas {
+    margin: auto;   /* Tells the browser to automatically size the margins */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 90%; /* Scale the canvas larger or smaller as the browser  window scales */
+    max-width: 800px;  /* Doesn't allows the canvas become greater than 800 pixels wide */
+}
+
+/* This style is used when the browser cannot do HTML 5 canvas */
+/* It styles how the non-animated image should be positioned   */
+#matrix-fallback {
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 90%;
+    max-width: 800px;
+}

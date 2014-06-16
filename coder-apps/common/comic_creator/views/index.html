@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Coder</title>
+    <meta charset="utf-8">
+    <!-- Standard Coder Includes -->
+    <script>
+        var appname = "{{app_name}}"; //app name (id) of this app
+        var appurl = "{{&app_url}}";
+        var staticurl = "{{&static_url}}"; //base path to your static files /static/apps/yourapp
+    </script>
+    <link href="/static/apps/coderlib/css/index.css" media="screen" rel="stylesheet" type="text/css"/>
+    <script src="/static/common/js/jquery.min.js"></script>
+    <script src="/static/common/ace-min/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/apps/coderlib/js/index.js"></script>
+    <script>
+        Coder.addBasicNav();
+    </script>
+    <!-- End Coder Includes -->
+
+    <!-- This app's includes -->
+    <link href="{{&static_url}}/css/index.css" media="screen" rel="stylesheet" type="text/css"/>
+    <script src="{{&static_url}}/js/index.js"></script>
+    <!-- End apps includes -->
+</head>
+<body>
+    <div id="page">
+        <div id="titleblock">
+            <h1>Your Title Here</h1>
+            <h2>Your Name And Credits Here</h2>
+        </div>
+        <div id="panel1">
+            <div class="narration top right infront">This is for narration<br>and scene-setting.</div>
+            <div class="bigtext bottom left infront">This is talking or a sound effect.</div>
+            <img src= "/static/apps/comic_creator/media/panel_1.jpg" id= "image1" class ="inback">
+        </div>
+        <div id="panel2">
+            <div class="narration top left infront">More narration.</div>
+            <div class="bigtext bottom right infront">More talking.</div>
+            <img src= "/static/apps/comic_creator/media/panel_2.jpg" id= "image2" class ="inback">
+        </div>
+        <div id="panel3">
+            <div class="narration top left infront">More narration.</div>
+            <div class="bigtext bottom right infront">More talking.</div>
+            <img src= "/static/apps/comic_creator/media/panel_3.jpg" id= "image3" class ="inback">
+        </div>
+        <div id="panel4">
+            <div class="narration top left infront">More narration.</div>
+            <div class="bigtext bottom right infront">More talking.</div>
+            <img src= "/static/apps/comic_creator/media/panel_4.jpg" id= "image4" class ="inback">
+        </div>
+        <div id="panel5">
+            <div class="narration top left infront">More narration.</div>
+            <div class="bigtext bottom right infront">More talking.</div>
+            <img src= "/static/apps/comic_creator/media/panel_5.jpg" id= "image5" class ="inback">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+
+/*This style  gives the body element in our HTML a cool blue background color*/
+body {
+    background-color: #ccf5f5;
+}
+
+/*This styles the div in the HTML that contains and centers our penguin game*/
+#gameholder {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*This styles the title div in or HTML*/
+#title {
+    width: 600px;
+    height: 150px;
+    /*This property embeds an image into the background of our div*/
+    background-image:url('/static/apps/pop_up_penguins/media/penguin_title.png');
+}
+
+/*This pseudo class is applied when the mouse hovers over the 1st penguin div*/
+.penguin1:hover {
+    background-image:url('/static/apps/pop_up_penguins/media/mound_1_hover.png');
+    /*This property changes our cursor to a pointer indicating an interactive element*/
+    cursor: pointer;
+}
+
+/*This pseudo class is applied when our 1st penguin div is clicked by the mouse button*/
+.penguin1:active {
+    background-image:url('/static/apps/pop_up_penguins/media/penguin_1.png');
+}
+
+/*This is the style for our 1st penguin div*/
+.penguin1 {
+    width: 200px;
+    height: 200px;
+    float: left;
+    background-image:url('/static/apps/pop_up_penguins/media/mound_1.png');
+}
+
+/*These are the styles for our 2nd penguin div.*/
+
+.penguin2:hover {
+    background-image:url('/static/apps/pop_up_penguins/media/mound_2_hover.png');
+    cursor: pointer;
+}
+
+.penguin2:active {
+    background-image:url('/static/apps/pop_up_penguins/media/penguin_2.png');
+}
+
+.penguin2 {
+    width: 200px;
+    height: 200px;
+    float: left;
+    background-image:url('/static/apps/pop_up_penguins/media/mound_2.png');
+}
+
+/*These are the styles for our 3rd penguin div.*/
+
+.penguin3:hover {
+    background-image:url('/static/apps/pop_up_penguins/media/mound_3_hover.png');
+    cursor: pointer;
+}
+
+.penguin3:active {
+    background-image:url('/static/apps/pop_up_penguins/media/penguin_3.png');
+}
+
+.penguin3 {
+    width: 200px;
+    height: 200px;
+    float: left;
+    background-image:url('/static/apps/pop_up_penguins/media/mound_3.png');
+}
+
+/*These are the styles for our 4th penguin div.*/
+
+.penguin4:hover {
+    background-image:url('/static/apps/pop_up_penguins/media/mound_4_hover.png');
+    cursor: pointer;
+}
+
+.penguin4:active {
+    background-image:url('/static/apps/pop_up_penguins/media/penguin_4.png');
+}
+
+.penguin4 {
+    width: 200px;
+    height: 200px;
+    float: left;
+    background-image:url('/static/apps/pop_up_penguins/media/mound_4.png');
+}
+
+/*These are the styles for our 5th penguin div.*/
+
+.penguin5:hover {
+    background-image:url('/static/apps/pop_up_penguins/media/mound_5_hover.png');
+    cursor: pointer;
+}
+
+.penguin5:active {
+    background-image:url('/static/apps/pop_up_penguins/media/penguin_5.png');
+}
+
+.penguin5 {
+    width: 200px;
+    height: 200px;
+    float: left;
+    background-image:url('/static/apps/pop_up_penguins/media/mound_5.png');
+}
+
+/*These are the styles for our 6th penguin div.*/
+
+.penguin6:hover {
+    background-image:url('/static/apps/pop_up_penguins/media/mound_6_hover.png');
+    cursor: pointer;
+}
+
+.penguin6:active {
+    background-image:url('/static/apps/pop_up_penguins/media/penguin_6.png');
+}
+
+.penguin6 {
+    width: 200px;
+    height: 200px;
+    float: left;
+    background-image:url('/static/apps/pop_up_penguins/media/mound_6.png');
+}
+
+/*These are the styles for our 7th penguin div.*/
+
+.penguin7:hover {
+    background-image:url('/static/apps/pop_up_penguins/media/mound_7_hover.png');
+    cursor: pointer;
+}
+
+.penguin7:active {
+    background-image:url('/static/apps/pop_up_penguins/media/penguin_7.png');
+}
+
+.penguin7 {
+    width: 200px;
+    height: 200px;
+    float: left;
+    background-image:url('/static/apps/pop_up_penguins/media/mound_7.png');
+}
+
+/*These are the styles for our 8th penguin div.*/
+
+.penguin8:hover {
+    background-image:url('/static/apps/pop_up_penguins/media/mound_8_hover.png');
+    cursor: pointer;
+}
+
+.penguin8:active {
+    background-image:url('/static/apps/pop_up_penguins/media/penguin_8.png');
+}
+
+.penguin8 {
+    width: 200px;
+    height: 200px;
+    float: left;
+    background-image:url('/static/apps/pop_up_penguins/media/mound_8.png');
+}
+
+/*These are the styles for our yeti div.*/
+
+.yeti:hover {
+    background-image:url('/static/apps/pop_up_penguins/media/mound_9_hover.png');
+    cursor: pointer;
+}
+
+.yeti:active {
+    background-image:url('/static/apps/pop_up_penguins/media/yeti.png');
+}
+
+.yeti {
+    width: 200px;
+    height: 200px;
+    float: left;
+    background-image:url('/static/apps/pop_up_penguins/media/mound_9.png');
+}
+
+

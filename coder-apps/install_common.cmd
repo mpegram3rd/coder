@@ -43,4 +43,15 @@ call install_app.cmd hello_coder %base% .\common\
 call install_app.cmd space_rocks_ %base% .\common\
 call install_app.cmd localauth %base% .\common\
 
+REM RVA Coder Dojo extra bundles
+call install_app.cmd pop_up_penguins %base% .\common\
+call install_app.cmd comic_creator %base% .\common\
+call install_app.cmd rva-coderdojo-matrix %base% .\common\
+
+REM  Assets for other projects used in RVA Coder Dojo
+if NOT EXIST %base%\project-assets  (
+	mkdir %base%\project-assets
+)
+xcopy ..\project-assets\*.* %base%\project-assets /E
+
 echo "Copy completed"

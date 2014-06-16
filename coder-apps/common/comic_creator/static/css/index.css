@@ -1,0 +1,158 @@
+/*This sets the background color for our comic page*/
+
+html body {
+    background-color: #2b2b2b;
+}
+
+
+/*These IDs are for the invisible divs that will hold our comic together*/
+
+#page {
+    height: 100%; 
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#titleblock {
+    height: 160px; 
+    width: 800px;
+    padding-left: 10px;
+}
+
+/*These are the text styles for the headline and byline*/
+
+h1 {
+    font-family: "Comic Sans MS";
+    font-style: italic;
+    font-weight: 900;
+    font-size: 45px;
+    color: white;
+}
+
+h2 {
+    font-family: "Comic Sans MS";
+    font-style: italic;
+    font-weight: 900;
+    font-size: 16px;
+    color: white;
+}
+
+/*These IDs are for the panels that will make up our comic.*/
+
+#panel1 {
+    position:relative;
+    height: 280px;
+    width: 780px;
+    border:10px solid #2b2b2b;
+    float: left;
+    background-color: #28d8eb;
+    overflow: hidden;
+}
+
+#panel2 {
+    position:relative;
+    height: 280px;
+    width: 280px;
+    border:10px solid #2b2b2b;
+    float: left;
+    background-color: #77da62;
+    overflow: hidden;
+}
+
+#panel3 {
+    position:relative;
+    height: 280px;
+    width: 480px;
+    border:10px solid #2b2b2b;
+    float: left;
+    background-color: #00d26d;
+    overflow: hidden;
+}
+
+#panel4 {
+    position:relative;
+    height: 280px;
+    width: 480px;
+    border:10px solid #2b2b2b;
+    float: left;
+    background-color: #ffc100;
+    overflow: hidden;
+}
+
+#panel5 {
+    position:relative;
+    height: 280px;
+    width: 280px;
+    border:10px solid #2b2b2b;
+    float: left;
+    background-color: #ff9100;
+    overflow: hidden;
+}
+
+/*These classes are for the different text styles we will be using in the comic*/
+
+.narration {
+    font-family: "Comic Sans MS";
+    font-style: italic;
+    font-weight: 900;
+    font-size: 15px;
+    padding: 15px;
+    color: white;
+    margin: 10px;
+    background-color: #2b2b2b;
+}
+
+.bigtext {
+    font-family: "Comic Sans MS";
+    color: white;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 100%;
+    margin: 20px;
+    text-shadow:2px 2px #2b2b2b;
+}
+
+/* These classes can position text and images within the panel.*/
+
+.left {
+    position:absolute;
+    left: 0;
+}
+
+.right {
+    position:absolute;
+    right: 0;
+}
+
+.top {
+    position:absolute;
+    top: 0;
+}
+
+.bottom {
+    position:absolute;
+    bottom: 0;
+}
+  
+/*These ids can be used fit specific images into our panels based on the dimensions of the image*/
+
+#image1 {
+    position: absolute;
+}
+
+/*These classes are for stacking or ordering elements on top of eachother.*/
+
+.inback {
+    z-index: 1;
+}
+
+.inmiddle {
+    z-index: 2;
+}
+
+.infront{
+    z-index: 3;
+}
+

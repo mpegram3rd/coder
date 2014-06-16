@@ -28,3 +28,12 @@ base=$1
 ./install_app.sh space_rocks_ $base ./common/
 ./install_app.sh localauth $base ./common/
 
+## RVA Coder Dojo extra bundles
+./install_app.sh pop_up_penguins $base ./common/
+./install_app.sh comic_creator $base ./common/
+./install_app.sh rva-coderdojo-matrix $base ./common/
+
+## Assets for other projects used in RVA Coder Dojo
+mkdir -p $base/project-assets
+cp -r ../project-assets/* $base/project-assets
+
