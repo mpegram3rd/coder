@@ -26,3 +26,4 @@ echo "Preparing dependent libraries"
 cd $base
 ./node/bin/npm install
 
+
