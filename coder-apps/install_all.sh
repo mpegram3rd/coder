@@ -17,7 +17,10 @@ fi
 
 base=$1
 
+## Setup the base installation folder.
 mkdir -p $base
+
+## Create basic install
 cp -r ../coder-base/* $base/
 ./install_common.sh $base
 
