@@ -25,3 +25,13 @@ body {
     width: 90%;
     max-width: 800px;
 }
+
+/* This is a color hack to make the Google Coder controls more prominent */
+#coder_basicnav {
+    color: rgba(238,238,0,.8);
+    background-color: rgba(0, 255, 0, .4);
+}
+#coder_basicnav .coder_home  a {
+    color: rgba(238,238,0,.8);
+}
+/* End of color hack */
