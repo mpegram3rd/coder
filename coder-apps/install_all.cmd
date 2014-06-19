@@ -15,5 +15,7 @@ echo "Installing common files"
 call install_common.cmd %base%
 
 echo "Preparing dependent libraries"
- cd %base%
- npm install
+cd %base%
+
+REM Note this isn't going to work because npm isn't installed
+REM node\npm install

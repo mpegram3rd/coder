@@ -21,7 +21,8 @@ mkdir -p $base
 cp -r ../coder-base/* $base/
 ./install_common.sh $base
 
+## Using the base folder's copy of npm perform the necessary library pulls.
 echo "Preparing dependent libraries"
 cd $base
-npm install
+./node/bin/npm install
 
